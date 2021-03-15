@@ -51,7 +51,7 @@ function renderAvatar(options) {
     // 渲染头像
     // 如果有上传头像则渲染上传的头像，没有则 上传首字母大写
     if (options.user_pic != null) {
-        $('.layui-nav-img').show('src', options.user_pic);
+        $('.layui-nav-img').show().attr('src', options.user_pic);
         $('.text-avatar').hide();
     } else {
         let text = name[0].toUpperCase();
