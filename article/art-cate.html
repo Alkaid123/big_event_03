@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 引入 layui css 文件 -->
+    <link rel="stylesheet" href="/assets/lib/layui/css/layui.css">
+    <!-- 引入 本页面的 css 文件 -->
+    <link rel="stylesheet" href="/assets/css/article/art-cate.css">
+</head>
+
+<body>
+    <div class="layui-card">
+        <div class="layui-card-header">文章类别管理</div>
+        <div class="layui-card-body">
+            <table class="layui-table">
+                <colgroup>
+                    <col>
+                    <col>
+                    <col width="200">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>分类名称</th>
+                        <th>分类别名</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- <tr>
+                        <td>金融</td>
+                        <td>jinrong</td>
+                        <td>
+                            <button type="button" class="layui-btn layui-btn-sm">编辑</button>
+                            <button type="button" class="layui-btn layui-btn-sm layui-btn-danger">删除</button>
+                        </td>
+                    </tr> -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- 引入 template js 文件 -->
+    <script src="/assets/lib/template-web.js"></script>
+    <!-- 模板 -->
+    <script type="text/html" id="tml-art-cate">
+        {{ each data}}
+        <tr>
+            <td>{{ $value.name }}</td>
+            <td>{{ $value.alias }}</td>
+            <td>
+                <button type="button" class="layui-btn layui-btn-sm">编辑</button>
+                <button type="button" class="layui-btn layui-btn-sm layui-btn-danger">删除</button>
+            </td>
+        </tr>
+        {{ /each }}
+    </script>
+
+    <!-- 引入 layui js 文件 -->
+    <script src="/assets/lib/layui/layui.all.js"></script>
+    <!-- 引入 jQuery js 文件 -->
+    <script src="/assets/lib/jquery.js"></script>
+    <!-- 引入 baseAPI js 文件 -->
+    <script src="/assets/js/baseAPI.js"></script>
+    <!-- 引入本页面的 js 文件 -->
+    <script src="/assets/js/article/art-cate.js"></script>
+</body>
+
+</html>
